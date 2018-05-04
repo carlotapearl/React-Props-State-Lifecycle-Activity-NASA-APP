@@ -76,12 +76,12 @@ class App extends Component {
             <div className="card">
               <div className="card-block">
                 <h3>Leave A Comment</h3>
-                <form>
+                <form onSubmit={this.handleFormSubmit}>      
                   <div className="form-group">
-                    <textarea className="form-control" name="comment"  rows="3" type="text" />
+                    <textarea value={this.state.commentText} onChange={this.handleCommentTextChange} className="form-control" name="comment"  rows="3" type="text" />
                   </div>
                   <div className="form-group">
-                    <input className="form-control col-md-3" name="name"  type="text"/>
+                    <input value={this.state.name} onChange={this.handleNameChange} className="form-control col-md-3" name="name"  type="text"/>
                   </div>
                   <div className="form-group pull-right">
                     <input className="btn btn-primary btn-lg" type="submit" value="Submit"/>
